@@ -1,5 +1,7 @@
 <template>
-   <section class="flex flex-col gap-y-4 sm:grid grid-cols-2 xl:grid-cols-4 sm:gap-8">
+   <section
+      class="flex flex-col gap-y-4 sm:grid grid-cols-2 xl:grid-cols-4 sm:gap-8"
+   >
       <div
          class="card py-8 px-10 w-full"
          v-for="(item, index) in analytics"

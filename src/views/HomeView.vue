@@ -15,10 +15,15 @@
 
       <Analytics />
       <InvoiceActions />
+
+      <div class="mt-6">
+         <RecentInvoices />
+      </div>
    </main>
 </template>
 
 <script setup>
 import Analytics from '@/components/Analytics.vue';
 import InvoiceActions from '@/components/InvoiceActions.vue';
+import RecentInvoices from '@/components/RecentInvoices.vue';
 </script>

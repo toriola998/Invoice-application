@@ -10,7 +10,9 @@
             :key="index"
          >
             <img :src="item.icon" alt="" />
-            <p class="text-xl md:text-[22px] font-medium mt-4">{{ item.text }}</p>
+            <p class="text-xl md:text-[22px] font-medium mt-4">
+               {{ item.text }}
+            </p>
             <p class="text-sm mt-2">{{ item.subText }}</p>
          </div>
       </div>
@@ -29,13 +31,13 @@ const invoiceActions = [
       text: 'Change Invoice settings',
       icon: '/assets/icons/setting.svg',
       subText: 'Customise your invoices',
-      theme: 'text-grey-14 bg-white',
+      theme: 'text-dark-grey bg-white',
    },
    {
       text: 'Manage Customer list',
       icon: '/assets/icons/profile-2user.svg',
       subText: 'Add and remove customers',
-      theme: 'text-grey-14 bg-white',
+      theme: 'text-dark-grey bg-white',
    },
 ];
 </script>
