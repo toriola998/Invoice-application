@@ -2,35 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Regular Weight */
-@font-face {
-   font-family: 'NeueHaasText';
-   src: url('/assets/fonts/neue-haas-grotesk-text-family/NeueHaasGrotText-Regular.otf')
-      format('opentype');
-   font-weight: 400;
-   font-style: normal;
-   font-display: swap;
+@layer base {
+   /* Regular Weight */
+   @font-face {
+      font-family: 'NeueHaas';
+      src: url('/assets/fonts/neue-haas-grotesk-text-family/NeueHaasGrotText-Regular.otf')
+         format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+   }
+
+   /* Medium Weight */
+   @font-face {
+      font-family: 'NeueHaas';
+      src: url('/assets/fonts/neue-haas-grotesk-text-family/NeueHaasGrotText-Medium.otf')
+         format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+   }
+
+   /* Bold Weight */
+   @font-face {
+      font-family: 'NeueHaas';
+      src: url('/assets/fonts/neue-haas-grotesk-text-family/NeueHaasGrotText-Bold.otf')
+         format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+   }
+   body {
+      font-family: 'NeueHaas', ui-sans-serif, system-ui, sans-serif;
+   }
 }
 
-/* Bold Weight */
-@font-face {
-   font-family: 'NeueHaasText';
-   src: url('/assets/fonts/neue-haas-grotesk-text-family/NeueHaasGrotText-Bold.otf')
-      format('opentype');
-   font-weight: 700;
-   font-style: normal;
-   font-display: swap;
+.btn {
+   @apply rounded-full uppercase flex justify-center
+   items-center h-14 font-medium text-sm;
+
+   &.blue {
+      @apply bg-blue-10 text-white;
+   }
+
+   &.white-outline {
+      @apply bg-white text-grey-11 border border-grey-10;
+   }
+
+   &.blue-outline {
+      @apply bg-white text-blue-10 border border-grey-10;
+   }
 }
 
-body {
-   font-family:
-      'NeueHaasText',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Helvetica,
-      Arial,
-      sans-serif;
-   line-height: 1.6;
+.card {
+   @apply bg-white rounded-3xl;
+}
+
+.flex-items {
+   @apply flex items-center;
+}
+
+.flex-center {
+   @apply flex justify-center items-center;
 }
