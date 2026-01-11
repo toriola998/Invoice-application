@@ -2,7 +2,7 @@
    <section>
       <h3 class="font-medium mt-10 mb-6">Invoice Actions</h3>
 
-      <div class="flex flex-col gap-8 lg:grid grid-cols-3">
+      <div class="flex flex-col gap-y-4 lg:grid-x-8 lg:grid grid-cols-3">
          <div
             class="rounded-3xl px-10 py-8"
             :class="item.theme"
@@ -10,7 +10,7 @@
             :key="index"
          >
             <img :src="item.icon" alt="" />
-            <p class="text-[22px] font-medium mt-4">{{ item.text }}</p>
+            <p class="text-xl md:text-[22px] font-medium mt-4">{{ item.text }}</p>
             <p class="text-sm mt-2">{{ item.subText }}</p>
          </div>
       </div>
