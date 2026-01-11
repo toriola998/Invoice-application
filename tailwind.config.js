@@ -17,6 +17,7 @@ export default {
          'grey-11': '#697598',
          'grey-12': '#F5F6FA',
          'grey-13': '#D9D9E0',
+         'grey-14': '#373B47'
        }
     },
   },

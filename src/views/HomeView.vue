@@ -14,9 +14,11 @@
       </div>
 
       <Analytics />
+      <InvoiceActions />
    </main>
 </template>
 
 <script setup>
 import Analytics from '@/components/Analytics.vue';
+import InvoiceActions from '@/components/InvoiceActions.vue';
 </script>
