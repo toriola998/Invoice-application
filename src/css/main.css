@@ -39,7 +39,7 @@
 
 .btn {
    @apply rounded-full uppercase flex justify-center
-   items-center h-16 font-medium text-sm;
+   items-center h-14 md:h-16 font-medium text-xs md:text-sm;
 
    &.blue {
       @apply bg-blue-10 text-white;

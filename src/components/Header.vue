@@ -1,7 +1,7 @@
 <template>
    <div class="w-full">
       <header
-         class="flex-items justify-between border-b border-grey-16 py-5 bg-grey-12 px-4 w-full"
+         class="flex-items justify-between border-b border-grey-16 py-5 bg-grey-12 px-4 lg:px-0 w-full"
       >
          <p
             class="font-medium text-xl sm:text-[28px] text-dark-grey tracking-widest"

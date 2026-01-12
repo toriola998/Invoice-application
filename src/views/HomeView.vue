@@ -2,31 +2,35 @@
    <div class="lg:grid page-layout">
       <SideBar />
       <div class="px-4 bg-grey-12 min-h-screen xl:px-10">
-         <Header class="hidden lg:flex" />
-         <main>
-            <div
-               class="flex flex-col gap-4 md:flex-row justify-between md:items-center mb-10 pt-10"
-            >
-               <h2 class="text-black-1 font-medium text-2xl md:text-3xl">
-                  Invoice
-               </h2>
+         <div class="max-w-[1500px] mx-auto pb-10">
+            <Header class="hidden lg:flex" />
+            <main>
+               <div
+                  class="flex flex-col gap-4 md:flex-row justify-between md:items-center mb-10 pt-10"
+               >
+                  <h2 class="text-black-1 font-medium text-2xl md:text-3xl">
+                     Invoice
+                  </h2>
 
-               <div class="flex flex-col sm:flex-row gap-4 sm:gap-x-8">
-                  <button class="btn white-outline w-full sm:w-48">
-                     See what's new
-                  </button>
-                  <button class="btn blue w-full sm:w-48">Create</button>
+                  <div class="flex flex-col sm:flex-row gap-4 sm:gap-x-8">
+                     <button class="btn white-outline w-full sm:w-48">
+                        See what's new
+                     </button>
+                     <button class="btn blue w-full sm:w-48">Create</button>
+                  </div>
                </div>
-            </div>
 
-            <Analytics />
-            <InvoiceActions />
+               <Analytics />
+               <InvoiceActions />
 
-            <div class="mt-6 gap-10 xl:grid grid-cols-[55%_auto]">
-               <RecentInvoices />
-               <RecentActivities />
-            </div>
-         </main>
+               <div
+                  class="flex flex-col gap-y-5 mt-6 xl:gap-10 xl:grid grid-cols-[58%_auto]"
+               >
+                  <RecentInvoices />
+                  <RecentActivities />
+               </div>
+            </main>
+         </div>
       </div>
    </div>
 </template>

@@ -13,7 +13,7 @@
             {{ item.date }}
          </p>
 
-         <div class="flex flex-col gap-y-14">
+         <div class="flex flex-col gap-y-14 sm:pl-6">
             <RecentInvoiceInfo
                v-for="(invoice, id) in item.items"
                :key="id"
@@ -32,13 +32,13 @@ const recentInvoices = [
       date: 'TODAY - 27TH NOVEMBER, 2022',
       items: [
          {
-            invoiceNumber: 'Invoice - 1023494 - 2304',
+            invoiceNumber: '1023494 - 2304',
             dueDate: 'May 19th, 2023',
             amount: 1311750.12,
             status: 'Paid',
          },
          {
-            invoiceNumber: 'Invoice - 1023494 - 2304',
+            invoiceNumber: '1023494 - 2304',
             dueDate: 'May 19th, 2023',
             amount: 1311750.12,
             status: 'Overdue',
@@ -49,13 +49,13 @@ const recentInvoices = [
       date: '8TH DECEMBER, 2022',
       items: [
          {
-            invoiceNumber: 'Invoice - 1023494 - 2304',
+            invoiceNumber: '1023494 - 2304',
             dueDate: 'May 19th, 2023',
             amount: 1311750.12,
             status: 'Draft',
          },
          {
-            invoiceNumber: 'Invoice - 1023494 - 2304',
+            invoiceNumber: '1023494 - 2304',
             dueDate: 'May 19th, 2023',
             amount: 1311750.12,
             status: 'Pending Payment',

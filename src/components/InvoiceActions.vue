@@ -3,7 +3,7 @@
       <h3 class="font-medium mt-10 mb-6">Invoice Actions</h3>
 
       <div
-         class="flex flex-col gap-y-4 lg:grid-x-8 lg:grid grid-cols-3 lg:gap-x-8"
+         class="flex flex-col gap-y-4 xl:grid-x-8 xl:grid grid-cols-3 xl:gap-x-8"
       >
          <div
             class="rounded-3xl px-10 py-8"

@@ -1,5 +1,5 @@
 <template>
-   <article class="grid grid-cols-3 justify-between">
+   <article class="grid grid-cols-3 justify-between items-baseline gap-x-3">
       <div class="text-sm font-medium text-dark-grey">
          <p>Invoice -</p>
          <p>{{ invoice?.invoiceNumber }}</p>
@@ -11,11 +11,11 @@
       </div>
 
       <div>
-         <p class="font-medium text-dark-grey">
+         <p class="font-medium text-dark-grey text-end">
             {{ formatToDollar(invoice?.amount) }}
          </p>
          <p
-            class="mt-3 text-[10px] rounded-full max-w-fit px-4 h-7 flex-center uppercase font-medium"
+            class="mt-3 text-[10px] rounded-full max-w-fit px-4 h-7 flex-center uppercase font-medium ml-auto"
             :class="getStatusColor(invoice?.status)"
          >
             {{ invoice?.status }}
