@@ -1,7 +1,7 @@
 <template>
    <div class="lg:grid page-layout">
       <SideBar />
-      <div class="px-4 bg-grey-12 min-h-screen xl:px-10">
+      <div class="px-4 bg-grey-12 min-h-screen md:px-10">
          <div class="max-w-[1500px] mx-auto pb-10">
             <Header class="hidden lg:flex" />
             <main>
@@ -33,6 +33,7 @@
          </div>
       </div>
    </div>
+   <Invoice />
 </template>
 
 <script setup>
@@ -42,6 +43,7 @@ import InvoiceActions from '@/components/InvoiceActions.vue';
 import RecentActivities from '@/components/RecentActivities.vue';
 import RecentInvoices from '@/components/RecentInvoices.vue';
 import SideBar from '@/components/SideBar.vue';
+import Invoice from '@/components/invoice-details/Invoice.vue';
 </script>
 
 <style scoped>

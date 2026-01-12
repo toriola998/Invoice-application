@@ -13,6 +13,8 @@ export default {
        colors: {
          'black': '#1F1F23',
          'blue-10': '#003EFF',
+         'blue-11': '#F2FBFF',
+         'blue-12': '#003EFF33',
          'grey-10': '#E3E6EF',
          'grey-11': '#697598',
          'grey-12': '#F5F6FA',
