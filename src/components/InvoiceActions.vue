@@ -2,7 +2,9 @@
    <section>
       <h3 class="font-medium mt-10 mb-6">Invoice Actions</h3>
 
-      <div class="flex flex-col gap-y-4 lg:grid-x-8 lg:grid grid-cols-3">
+      <div
+         class="flex flex-col gap-y-4 lg:grid-x-8 lg:grid grid-cols-3 lg:gap-x-8"
+      >
          <div
             class="rounded-3xl px-10 py-8"
             :class="item.theme"
