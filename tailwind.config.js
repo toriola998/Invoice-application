@@ -22,6 +22,7 @@ export default {
          'grey-14': '#F8F8FB',
          'grey-15': '#666F77',
          'grey-16': '#A1B8FF33',
+         'grey-17': '#B7BDCF',
          'dark-grey': '#373B47',
          'green-10': '#E6FFF0',
          'green-11': '#12904333',
@@ -33,7 +34,8 @@ export default {
          'light-grey-12': '#373B4733',
          'yellow-10': '#FFF8EB',
          'yellow-11': '#D98F0033',
-         'yellow-12': '#D98F00'
+         'yellow-12': '#D98F00',
+         'fushia': '#FCDDEC'
        }
     },
   },

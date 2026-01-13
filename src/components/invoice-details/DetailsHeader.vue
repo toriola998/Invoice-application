@@ -1,5 +1,7 @@
 <template>
-   <div class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+   <div
+      class="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between"
+   >
       <div>
          <h1 class="text-black font-bold text-2xl lg:text-3xl">
             Invoice - 1023494 - 2304
@@ -10,7 +12,9 @@
       </div>
 
       <div class="flex flex-col sm:flex-row gap-2 md:gap-6">
-         <button class="btn blue-outline w-full sm:w-60">Download as pdf</button>
+         <button class="btn blue-outline w-full sm:w-60">
+            Download as pdf
+         </button>
 
          <div class="flex gap-4 md:gap-x-6">
             <button class="btn blue w-full sm:w-48">Send Invoice</button>
