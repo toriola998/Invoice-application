@@ -6,10 +6,10 @@
          <button class="btn blue-outline w-32">View all</button>
       </div>
 
-      <RecentActivityCard />
+      <ActivityCard />
    </section>
 </template>
 
 <script setup>
-import RecentActivityCard from './RecentActivityCard.vue';
+import ActivityCard from './ActivityCard.vue';
 </script>

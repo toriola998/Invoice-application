@@ -35,12 +35,15 @@
                   </div>
                </div>
 
-               <div class="flex flex-col gap-y-4 xl:grid grid-cols-[60%_auto]">
+               <div
+                  class="flex flex-col gap-y-4 xl:grid grid-cols-[60%_auto] xl:gap-x-10"
+               >
                   <div class="grey-border p-4 sm:p-8">
-                     <InvoicSenderDetails />
+                     <InvoiceSenderDetails />
                      <InvoiceItems />
                   </div>
-                  <h1>Hello</h1>
+
+                  <InvoiceActivity />
                </div>
             </div>
          </div>
@@ -52,7 +55,9 @@
 import { ref } from 'vue';
 import DetailsHeader from './DetailsHeader.vue';
 import InvoiceItems from './InvoiceItems.vue';
-import InvoicSenderDetails from './InvoiceSenderDetails.vue';
+import InvoiceSenderDetails from './InvoiceSenderDetails.vue';
+import RecentActivities from '../RecentActivities.vue';
+import InvoiceActivity from './InvoiceActivity.vue';
 
 const reminders = ref([
    { id: 1, label: '14 days before due date', active: true },

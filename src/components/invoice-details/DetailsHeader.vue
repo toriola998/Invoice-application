@@ -20,7 +20,7 @@
             <button class="btn blue w-full sm:w-48">Send Invoice</button>
             <div class="relative">
                <button
-                  class="btn white-outline px-6"
+                  class="btn white-outline px-6 !text-dark-grey"
                   @click="toggleMore = !toggleMore"
                >
                   More
