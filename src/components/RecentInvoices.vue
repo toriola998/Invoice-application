@@ -29,22 +29,35 @@
                   v-for="(invoice, id) in item.items"
                   :key="id"
                   :invoice="invoice"
+                  @getInvoice="getInvoice"
                />
             </div>
          </div>
       </div>
    </section>
+   <Invoice v-if="showInvoice" @close="showInvoice = false" />
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useErrorState, useGetRecentInvoices } from '@/composables/useApi';
 import ErrorState from './shared/ErrorState.vue';
 import SkeletonLoader from './shared/SkeletonLoader.vue';
 import RecentInvoiceInfo from './RecentInvoiceInfo.vue';
+import Invoice from '@/components/invoice-details/Invoice.vue';
 
 const { isLoading, data: recentInvoices, error } = useGetRecentInvoices();
 const { showError, errorTitle, errorSubtext } = useErrorState(
    error,
    recentInvoices
 );
+
+const selectedInvoice = ref('');
+const showInvoice = ref(false);
+
+function getInvoice(param) {
+   console.log(param);
+   showInvoice.value = true;
+   selectedInvoice.value = param;
+}
 </script>

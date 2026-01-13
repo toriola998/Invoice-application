@@ -6,7 +6,7 @@
          <div
             class="modal-inner bg-white w-full rounded-[40px] p-6 md:p-10 overflow-y-scroll no-scrollbar"
          >
-            <button class="close-btn">
+            <button class="close-btn" @click="$emit('close')">
                <img src="/assets/icons/close.svg" alt="" />
             </button>
 

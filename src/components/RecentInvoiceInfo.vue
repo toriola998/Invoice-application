@@ -1,5 +1,8 @@
 <template>
-   <article class="grid grid-cols-3 justify-between items-baseline gap-x-3">
+   <article
+      class="grid grid-cols-3 justify-between items-baseline gap-x-3 cursor-pointer"
+      @click="$emit('getInvoice', invoice)"
+   >
       <div class="text-sm font-medium text-dark-grey">
          <p>Invoice -</p>
          <p>{{ invoice?.invoiceNumber }}</p>

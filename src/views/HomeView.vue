@@ -33,7 +33,6 @@
          </div>
       </div>
    </div>
-   <!-- <Invoice /> -->
 </template>
 
 <script setup>
@@ -43,7 +42,6 @@ import InvoiceActions from '@/components/InvoiceActions.vue';
 import RecentActivities from '@/components/RecentActivities.vue';
 import RecentInvoices from '@/components/RecentInvoices.vue';
 import SideBar from '@/components/SideBar.vue';
-import Invoice from '@/components/invoice-details/Invoice.vue';
 </script>
 
 <style scoped>
