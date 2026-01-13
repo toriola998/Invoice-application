@@ -1,0 +1,37 @@
+{
+  "invoices": [
+    {
+      "id": "1023494-2304",
+      "customer": "128 Hug x 10 Hug",
+      "amount": 8625770.00,
+      "items": []
+    }
+  ],
+  "activities": [],
+  "invoice_analytics": [
+    {
+    "text": "Total Paid",
+    "theme": "#B6FDD3",
+    "value": "1,289",
+    "amount": 4120102.76
+  },
+  {
+    "text": "Total Overdue",
+    "theme": "#FFB7BD",
+    "value": "13",
+    "amount": 23000.13
+  },
+  {
+    "text": "Total Draft",
+    "theme": "#D9D9E0",
+    "value": "08",
+    "amount": 12200.0
+  },
+  {
+    "text": "Total Unpaid",
+    "theme": "#F8E39B",
+    "value": "06",
+    "amount": 87102.0
+  }
+  ]
+}
