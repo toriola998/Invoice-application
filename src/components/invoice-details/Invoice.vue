@@ -1,44 +1,47 @@
 <template>
-   <div class="modal-layout flex justify-center px-4 pt-20 pb-6">
+   <div class="modal-layout">
       <div
-         class="modal-inner bg-white w-full relative rounded-[40px] p-6 md:p-10 max-w-[1330px] mx-auto"
+         class="relative flex justify-center px-4 pt-20 pb-6 max-w-[1330px] mx-auto"
       >
-         <button class="close-btn">
-            <img src="/assets/icons/close.svg" alt="" />
-         </button>
+         <div
+            class="modal-inner bg-white w-full rounded-[40px] p-6 md:p-10 overflow-y-scroll no-scrollbar"
+         >
+            <button class="close-btn">
+               <img src="/assets/icons/close.svg" alt="" />
+            </button>
 
-         <!-- h-[600px] overflow-y-scroll -->
-         <div class="pr-6 h-[600px] overflow-y-scroll">
-            <DetailsHeader />
+            <div class="pr-6 h-[calc(100vh-200px)] overflow-y-scroll">
+               <DetailsHeader />
 
-            <div
-               class="border border-grey-10 rounded-3xl py-6 px-6 flex-items gap-x-2 my-8 xl:w-fit"
-            >
-               <p class="text-xs text-grey-15 pr-2">REMINDERS</p>
                <div
-                  class="flex items-center gap-x-2 overflow-x-auto scrollbar-hide xl:overflow-visible"
+                  class="border border-grey-10 rounded-3xl py-6 px-6 flex-items gap-x-2 my-8 xl:w-fit"
                >
-                  <button
-                     v-for="reminder in reminders"
-                     :key="reminder.id"
-                     :class="getButtonClasses(reminder.active)"
+                  <p class="text-xs text-grey-15 pr-2">REMINDERS</p>
+                  <div
+                     class="flex items-center gap-x-2 overflow-x-auto scrollbar-hide xl:overflow-visible"
                   >
-                     {{ reminder.label }}
-                     <img
-                        v-if="reminder.active"
-                        src="/assets/icons/tick-circle.svg"
-                        alt=""
-                     />
-                  </button>
+                     <button
+                        v-for="reminder in reminders"
+                        :key="reminder.id"
+                        :class="getButtonClasses(reminder.active)"
+                     >
+                        {{ reminder.label }}
+                        <img
+                           v-if="reminder.active"
+                           src="/assets/icons/tick-circle.svg"
+                           alt=""
+                        />
+                     </button>
+                  </div>
                </div>
-            </div>
 
-            <div class="flex flex-col gap-y-4 xl:grid grid-cols-[60%_auto]">
-               <div class="border border-grey-10 rounded-[40px] p-4 sm:p-8">
-                  <InvoicSenderDetails />
-                  <InvoiceItems />
+               <div class="flex flex-col gap-y-4 xl:grid grid-cols-[60%_auto]">
+                  <div class="grey-border p-4 sm:p-8">
+                     <InvoicSenderDetails />
+                     <InvoiceItems />
+                  </div>
+                  <h1>Hello</h1>
                </div>
-               <h1>Hello</h1>
             </div>
          </div>
       </div>
@@ -107,6 +110,6 @@ const getButtonClasses = isActive => {
 
 .close-btn {
    @apply bg-white h-16 w-16 rounded-full flex items-center justify-center border
-    border-grey-10 absolute -top-[70px] right-0;
+    border-grey-10 absolute top-[10px] right-4 z-50;
 }
 </style>

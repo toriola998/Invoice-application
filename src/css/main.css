@@ -65,3 +65,16 @@
 .flex-center {
    @apply flex justify-center items-center;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+   display: none;
+}
+
+.no-scrollbar {
+   -ms-overflow-style: none; /* IE & Edge */
+   scrollbar-width: none; /* Firefox */
+}
+
+.grey-border {
+   @apply border border-grey-10 rounded-[40px];
+}

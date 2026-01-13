@@ -18,20 +18,21 @@
 
          <div class="flex gap-4 md:gap-x-6">
             <button class="btn blue w-full sm:w-48">Send Invoice</button>
-            <button
-               class="btn white-outline w-full sm:w-24"
-               @click="toggleMore = !toggleMore"
-            >
-               More
-            </button>
+            <div class="relative">
+               <button
+                  class="btn white-outline px-6"
+                  @click="toggleMore = !toggleMore"
+               >
+                  More
+               </button>
+               <ul class="more-options" v-if="toggleMore">
+                  <li>DUPLICATE INVOICE</li>
+                  <li>GET SHARABLE LINK</li>
+               </ul>
+            </div>
          </div>
       </div>
    </div>
-
-   <ul class="more-options" v-if="toggleMore">
-      <li>DUPLICATE INVOICE</li>
-      <li>GET SHARABLE LINK</li>
-   </ul>
 
    <p
       class="btn text-blue-10 border border-blue-12 bg-blue-11 text-[9px] sm:text-[10px] w-36 !h-10 mt-6"
@@ -49,6 +50,6 @@ const toggleMore = ref(false);
 <style scoped>
 .more-options {
    @apply text-grey-11 text-sm font-medium border border-grey-10 absolute
-   rounded-3xl py-5 px-7 flex flex-col gap-y-5 w-[262px] mt-3 bg-white right-6;
+   rounded-3xl p-7 flex flex-col gap-y-7 w-[262px] mt-3 bg-white right-0;
 }
 </style>
