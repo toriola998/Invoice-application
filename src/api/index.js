@@ -8,4 +8,9 @@ export default {
       let url = 'invoice_analytics';
       return axios({ method, url });
    },
+   getAllRecentInvoices: () => {
+      let method = 'get';
+      let url = 'recent_invoices';
+      return axios({ method, url });
+   },
 };

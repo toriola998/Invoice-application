@@ -11,8 +11,8 @@
          :title="errorTitle"
          :sub-title="errorSubtext"
       />
-
       <div
+         v-else
          class="flex flex-col gap-y-4 sm:grid grid-cols-2 xl:grid-cols-4 sm:gap-8"
       >
          <div

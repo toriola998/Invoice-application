@@ -1,19 +1,23 @@
 import api from '@/api';
 import { useQuery } from '@tanstack/vue-query';
-
-import { computed, unref } from 'vue';
-
-const fetchInvoices = async () => {
-   const response = await fetch(`${API_BASE_URL}/invoices`);
-   if (!response.ok) throw new Error('Failed to fetch invoices');
-   return response.json();
-};
+import { computed } from 'vue';
 
 export const useGetAnalytics = () => {
    return useQuery({
       queryKey: ['invoice_analytics'],
       queryFn: async () => {
          const { data } = await api.getAnalytics();
+         return data || {};
+      },
+      staleTime: 5 * 60 * 1000,
+   });
+};
+
+export const useGetRecentInvoices = () => {
+   return useQuery({
+      queryKey: ['recent_invoices'],
+      queryFn: async () => {
+         const { data } = await api.getAllRecentInvoices();
          return data || {};
       },
       staleTime: 5 * 60 * 1000,
@@ -41,16 +45,3 @@ export function useErrorState(error, list) {
       errorSubtext,
    };
 }
-
-// export const useGetAttorneyCases = (params) => {
-//   const paramsValue = computed(() => unref(params))
-
-//   return useQuery({
-//     queryKey: ['casesForAttorney', paramsValue],
-//     queryFn: async () => {
-//       const { data } = await attorney.getAllCases(paramsValue.value)
-//       return data || {}
-//     },
-//     staleTime: 5 * 60 * 1000,
-//   })
-// }
