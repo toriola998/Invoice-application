@@ -69,5 +69,32 @@
       }
     ]
   }
-]
+   ],
+   "recent_activities": [
+  {
+    "title": "You",
+    "timestamp": "Today, 12:20 PM",
+    "action": "created",
+    "invoiceId": "00239434/Olaniyi Ojo Adewale"
+  },
+  {
+    "title": "Toriola",
+    "timestamp": "Today, 12:40 PM",
+    "action": "created",
+    "invoiceId": "00239434/Olaniyi Ojo Adewale"
+  },
+  {
+    "title": "Faidat",
+    "timestamp": "Today, 21:20 PM",
+    "action": "created",
+    "invoiceId": "00239434/Olaniyi Ojo Adewale"
+  },
+  {
+    "title": "You",
+    "timestamp": "Today, 12:20 PM",
+    "action": "created",
+    "invoiceId": "00239434/Olaniyi Ojo Adewale"
+  }
+  
+] 
 }

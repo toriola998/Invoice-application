@@ -13,4 +13,9 @@ export default {
       let url = 'recent_invoices';
       return axios({ method, url });
    },
+   getAllRecentActivities: () => {
+      let method = 'get';
+      let url = 'recent_activities';
+      return axios({ method, url });
+   },
 };

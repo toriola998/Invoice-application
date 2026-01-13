@@ -24,6 +24,17 @@ export const useGetRecentInvoices = () => {
    });
 };
 
+export const useGetRecentActivities = () => {
+   return useQuery({
+      queryKey: ['recent_activities'],
+      queryFn: async () => {
+         const { data } = await api.getAllRecentActivities();
+         return data || {};
+      },
+      staleTime: 5 * 60 * 1000,
+   });
+};
+
 export function useErrorState(error, list) {
    const showError = computed(() => {
       return error.value || !list.value || list.value.length === 0;

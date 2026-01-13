@@ -13,9 +13,9 @@
 
          <div class="bg-light-grey-10 p-4 rounded-2xl mt-2 text-sm">
             <!--Create-->
-            <p v-if="item.action === 'create'">
-               <span class="text-grey-11">Created Invoice</span>
-               <span class="font-medium">{{ item.id }}</span>
+            <p v-if="item.action === 'created'">
+               <span class="text-grey-11">Created Invoice </span>
+               <span class="font-medium">{{ item.invoiceId }}</span>
             </p>
 
             <!-- Sent -->

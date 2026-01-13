@@ -9,7 +9,7 @@
       </div>
 
       <SkeletonLoader
-         v-if="!isLoading"
+         v-if="isLoading"
          type="paragraph, table-row, table-row"
          class="mt-11"
       />
