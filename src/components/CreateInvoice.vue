@@ -52,7 +52,7 @@ import api from '@/api';
 const isLoading = ref(false);
 const emit = defineEmits(['success']);
 
-const { data: recentInvoices, error } = useGetRecentInvoices();
+const { data: recentInvoices, refetch } = useGetRecentInvoices();
 
 const validationSchema = yup.object({
    clientName: yup.string().required('Client name is required'),
@@ -81,7 +81,28 @@ const {
    handleBlur: descriptionBlur,
 } = useField('description');
 
-const todayString = () => new Date().toDateString();
+const todayString = (date = new Date()) => {
+   const day = date.getDate();
+   const month = date.toLocaleString('en-US', { month: 'long' }).toUpperCase();
+   const year = date.getFullYear();
+
+   const ordinal = n => {
+      if (n > 3 && n < 21) return 'TH';
+      switch (n % 10) {
+         case 1:
+            return 'ST';
+         case 2:
+            return 'ND';
+         case 3:
+            return 'RD';
+         default:
+            return 'TH';
+      }
+   };
+
+   return `${day}${ordinal(day)} ${month}, ${year}`;
+};
+
 const generateInvoiceItem = () => ({
    invoiceNumber: `${Math.floor(100000 + Math.random() * 900000)} - ${Math.floor(Math.random() * 9999)}`,
    dueDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString(),
@@ -124,6 +145,9 @@ const handleCreateInvoice = async () => {
          })}`,
       };
       await api.addInvoiceActivity(newActivityPayload);
+      if (refetch) {
+         await refetch();
+      }
 
       toast.success('Invoice created successfully!');
       emit('success');

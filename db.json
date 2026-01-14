@@ -5,25 +5,29 @@
       "text": "Total Paid",
       "theme": "#B6FDD3",
       "value": "1,289",
-      "amount": 4120102.76
+      "amount": 4120102.76,
+      "id": "fb60"
     },
     {
       "text": "Total Overdue",
       "theme": "#FFB7BD",
       "value": "13",
-      "amount": 23000.13
+      "amount": 23000.13,
+      "id": "4d72"
     },
     {
       "text": "Total Draft",
       "theme": "#D9D9E0",
       "value": "08",
-      "amount": 12200
+      "amount": 12200,
+      "id": "dec4"
     },
     {
       "text": "Total Unpaid",
       "theme": "#F8E39B",
       "value": "06",
-      "amount": 87102
+      "amount": 87102,
+      "id": "2b44"
     }
   ],
   "recent_invoices": [
@@ -44,7 +48,8 @@
           "amount": 1311750.12,
           "status": "Overdue"
         }
-      ]
+      ],
+      "id": "94ef"
     },
     {
       "date": "8TH DECEMBER, 2022",
@@ -70,16 +75,23 @@
           "amount": 1311750.12,
           "status": "Partial Payment"
         }
-      ]
+      ],
+      "id": "f54e"
     },
     {
-      "id": "ad34",
-      "date": "Wed Jan 14 2026",
+      "id": "2a58",
+      "date": "14TH JANUARY, 2026",
       "items": [
         {
-          "invoiceNumber": "110950 - 6785",
+          "invoiceNumber": "200978 - 231",
           "dueDate": "1/21/2026",
-          "amount": 5000000,
+          "amount": 40000,
+          "status": "Pending Payment"
+        },
+        {
+          "invoiceNumber": "428959 - 9633",
+          "dueDate": "1/21/2026",
+          "amount": 4000,
           "status": "Draft"
         }
       ]
@@ -90,25 +102,29 @@
       "title": "You",
       "timestamp": "Today, 12:20 PM",
       "action": "created",
-      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "id": "c1bc"
     },
     {
       "title": "You",
       "timestamp": "Today, 12:40 PM",
       "action": "created",
-      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "id": "354a"
     },
     {
       "title": "You",
       "timestamp": "Today, 21:20 PM",
       "action": "created",
-      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "id": "1fb8"
     },
     {
       "title": "You",
       "timestamp": "Today, 12:20 PM",
       "action": "created",
-      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "id": "8491"
     }
   ],
   "invoice_activity": [
@@ -116,28 +132,32 @@
       "title": "You",
       "timestamp": "Today, 12:20 PM",
       "action": "created",
-      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "id": "cf8d"
     },
     {
       "title": "You",
       "timestamp": "Today, 12:20 PM",
       "action": "sent",
       "invoiceId": "00239434/Olaniyi Ojo Adewale",
-      "receiver": "Olaniyi Ojo Adewale"
+      "receiver": "Olaniyi Ojo Adewale",
+      "id": "a5e4"
     },
     {
       "title": "Payment Confirmed",
       "timestamp": "Today, 12:20 PM",
       "action": "payment",
       "paymentType": "partial",
-      "amount": 503000
+      "amount": 503000,
+      "id": "5ef8"
     },
     {
       "title": "Payment Confirmed",
       "timestamp": "Today, 12:20 PM",
       "action": "payment",
       "paymentType": "full",
-      "amount": 6000000
+      "amount": 6000000,
+      "id": "52c0"
     },
     {
       "id": "075f",
@@ -173,6 +193,27 @@
       "action": "created",
       "invoiceId": "110950 - 6785/Zainab Toriola Ajoke",
       "timestamp": "Today, 2:15 PM"
+    },
+    {
+      "id": "4146",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "200978 - 231/Ademola Taiwo",
+      "timestamp": "Today, 2:59 PM"
+    },
+    {
+      "id": "f8bf",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "161083 - 2988/Zainab Toriola Ajoke",
+      "timestamp": "Today, 3:00 PM"
+    },
+    {
+      "id": "c3da",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "428959 - 9633/Adedamola Kehinde Toriola",
+      "timestamp": "Today, 3:04 PM"
     }
   ]
 }
