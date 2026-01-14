@@ -31,12 +31,14 @@
       "date": "TODAY - 27TH NOVEMBER, 2022",
       "items": [
         {
+          "id": 1,
           "invoiceNumber": "1023500 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Paid"
         },
         {
+          "id": 2,
           "invoiceNumber": "1023608 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
@@ -48,18 +50,21 @@
       "date": "8TH DECEMBER, 2022",
       "items": [
         {
+          "id": 3,
           "invoiceNumber": "1023875 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Draft"
         },
         {
+          "id": 4,
           "invoiceNumber": "1023095 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Pending Payment"
         },
         {
+          "id": 5,
           "invoiceNumber": "102367 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
@@ -68,61 +73,13 @@
       ]
     },
     {
-      "id": "b3c4",
+      "id": "ad34",
       "date": "Wed Jan 14 2026",
       "items": [
         {
-          "invoiceNumber": "181615 - 5586",
+          "invoiceNumber": "110950 - 6785",
           "dueDate": "1/21/2026",
-          "amount": 2000,
-          "status": "Draft"
-        }
-      ]
-    },
-    {
-      "id": "a4a7",
-      "date": "Wed Jan 14 2026",
-      "items": [
-        {
-          "invoiceNumber": "655530 - 7067",
-          "dueDate": "1/21/2026",
-          "amount": 20000,
-          "status": "Draft"
-        }
-      ]
-    },
-    {
-      "id": "981d",
-      "date": "Wed Jan 14 2026",
-      "items": [
-        {
-          "invoiceNumber": "946388 - 2104",
-          "dueDate": "1/21/2026",
-          "amount": 30000,
-          "status": "Draft"
-        }
-      ]
-    },
-    {
-      "id": "b4fa",
-      "date": "Wed Jan 14 2026",
-      "items": [
-        {
-          "invoiceNumber": "685365 - 88",
-          "dueDate": "1/21/2026",
-          "amount": 3000,
-          "status": "Draft"
-        }
-      ]
-    },
-    {
-      "id": "af2d",
-      "date": "Wed Jan 14 2026",
-      "items": [
-        {
-          "invoiceNumber": "555115 - 4362",
-          "dueDate": "1/21/2026",
-          "amount": 30000,
+          "amount": 5000000,
           "status": "Draft"
         }
       ]
@@ -209,6 +166,13 @@
       "action": "created",
       "invoiceId": "555115 - 4362/Zainab Toriola Ajoke",
       "timestamp": "Today, 1:51 PM"
+    },
+    {
+      "id": "c65e",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "110950 - 6785/Zainab Toriola Ajoke",
+      "timestamp": "Today, 2:15 PM"
     }
   ]
 }

@@ -33,6 +33,11 @@ export default {
       let url = 'invoice_activity';
       return axios({ method, url, data });
    },
+   updateInvoice: (id, data) => {
+      let method = 'patch';
+      let url = `recent_invoices/${id}`;
+      return axios({ method, url, data });
+   },
 };
 
 import { initializeApp } from 'firebase/app';
