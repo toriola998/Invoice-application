@@ -1,7 +1,7 @@
 <template>
    <button
       class="text-sm btn tw-rounded"
-      :class="[{ 'cursor-not-allowed': isLoading, '!bg-grey-2': disabled }]"
+      :class="[{ 'cursor-not-allowed': isLoading, '!bg-gray-400': disabled }]"
       @click="$emit('action')"
       :type="type"
       :disabled="disabled"
@@ -34,5 +34,24 @@ defineProps({
    -webkit-animation: spin 0.7s linear infinite;
    /* Safari */
    animation: spin 0.7s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+   0% {
+      -webkit-transform: rotate(0deg);
+   }
+   100% {
+      -webkit-transform: rotate(360deg);
+   }
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
 }
 </style>
