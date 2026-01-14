@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 export default {
    getAnalytics: () => {
@@ -19,3 +19,19 @@ export default {
       return axios({ method, url });
    },
 };
+
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+
+const firebaseConfig = {
+   apiKey: import.meta.env.VITE_API_KEY,
+   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+   projectId: import.meta.env.VITE_PROJECT_ID,
+   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+   messagingSenderId: import.meta.env.VITE_MESSAGE_SENDER_ID,
+   appId: import.meta.env.VITE_APP_ID,
+   measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);

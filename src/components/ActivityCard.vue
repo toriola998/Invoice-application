@@ -1,6 +1,9 @@
 <template>
-   <article class="flex items-start gap-x-4">
-      <div class="absolute left-5 top-10 h-10 w-1 bg-gray-200"></div>
+   <article class="flex items-start gap-x-4 relative">
+      <div
+         class="absolute left-5 top-10 h-10 w-1 bg-gray-200"
+         v-if="showTimeline"
+      />
 
       <div class="relative">
          <img src="/assets/icons/image.svg" alt="" class="rounded-full" />
@@ -47,6 +50,10 @@ const props = defineProps({
    item: {
       type: Object,
       default: () => ({}),
+   },
+   showTimeline: {
+      type: Boolean,
+      default: false,
    },
 });
 </script>

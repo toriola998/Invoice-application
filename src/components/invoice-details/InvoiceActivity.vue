@@ -3,9 +3,9 @@
       <p class="font-medium text-lg md:text-xl mb-6">Invoice Activity</p>
 
       <div class="relative">
-         <ActivityCard />
-         <ActivityCard />
-         <ActivityCard />
+         <ActivityCard showTimeline />
+         <ActivityCard showTimeline />
+         <ActivityCard showTimeline />
       </div>
    </div>
 </template>
