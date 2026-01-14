@@ -16,7 +16,12 @@
                      <button class="btn white-outline w-full sm:w-48">
                         See what's new
                      </button>
-                     <button class="btn blue w-full sm:w-48">Create</button>
+                     <button
+                        class="btn blue w-full sm:w-48"
+                        @click="showCreateInvoice = true"
+                     >
+                        Create
+                     </button>
                   </div>
                </div>
 
@@ -32,16 +37,29 @@
             </main>
          </div>
       </div>
+
+      <CreateInvoice
+         v-if="showCreateInvoice"
+         @success="showCreateInvoice = false"
+      />
    </div>
 </template>
 
 <script setup>
+import { ref, provide } from 'vue';
+import CreateInvoice from '@/components/CreateInvoice.vue';
 import Analytics from '@/components/Analytics.vue';
 import Header from '@/components/Header.vue';
 import InvoiceActions from '@/components/InvoiceActions.vue';
 import RecentActivities from '@/components/RecentActivities.vue';
 import RecentInvoices from '@/components/RecentInvoices.vue';
 import SideBar from '@/components/SideBar.vue';
+
+const showCreateInvoice = ref(false);
+
+provide('closeModal', () => {
+   showCreateInvoice.value = false;
+});
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@ export const useGetAnalytics = () => {
       queryKey: ['invoice_analytics'],
       queryFn: async () => {
          const { data } = await api.getAnalytics();
-         return data || {};
+         return data || [];
       },
       staleTime: 5 * 60 * 1000,
    });
@@ -18,7 +18,7 @@ export const useGetRecentInvoices = () => {
       queryKey: ['recent_invoices'],
       queryFn: async () => {
          const { data } = await api.getAllRecentInvoices();
-         return data || {};
+         return data || [];
       },
       staleTime: 5 * 60 * 1000,
    });
@@ -29,7 +29,7 @@ export const useGetRecentActivities = () => {
       queryKey: ['recent_activities'],
       queryFn: async () => {
          const { data } = await api.getAllRecentActivities();
-         return data || {};
+         return data || [];
       },
       staleTime: 5 * 60 * 1000,
    });
@@ -40,7 +40,7 @@ export const useGetInvoiceActivities = () => {
       queryKey: ['invoice_activity'],
       queryFn: async () => {
          const { data } = await api.getAllInvoiceActivities();
-         return data || {};
+         return data || [];
       },
       staleTime: 5 * 60 * 1000,
    });

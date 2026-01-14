@@ -35,15 +35,11 @@
          </div>
       </div>
    </section>
-   <Invoice
-      :invoice="selectedInvoice"
-      v-if="showInvoice"
-      @close="showInvoice = false"
-   />
+   <Invoice :invoice="selectedInvoice" v-if="showInvoice" />
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import { useErrorState, useGetRecentInvoices } from '@/composables/useApi';
 import ErrorState from './shared/ErrorState.vue';
 import SkeletonLoader from './shared/SkeletonLoader.vue';
@@ -64,4 +60,8 @@ function getInvoice(param) {
    showInvoice.value = true;
    selectedInvoice.value = param;
 }
+
+provide('closeModal', () => {
+   showInvoice.value = false;
+});
 </script>

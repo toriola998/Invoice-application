@@ -23,6 +23,16 @@ export default {
       let url = 'invoice_activity';
       return axios({ method, url });
    },
+   createInvoice: data => {
+      let method = 'post';
+      let url = 'recent_invoices';
+      return axios({ method, url, data });
+   },
+   addInvoiceActivity: data => {
+      let method = 'post';
+      let url = 'invoice_activity';
+      return axios({ method, url, data });
+   },
 };
 
 import { initializeApp } from 'firebase/app';

@@ -1,4 +1,5 @@
 {
+  "invoices": [],
   "invoice_analytics": [
     {
       "text": "Total Paid",
@@ -65,6 +66,66 @@
           "status": "Partial Payment"
         }
       ]
+    },
+    {
+      "id": "b3c4",
+      "date": "Wed Jan 14 2026",
+      "items": [
+        {
+          "invoiceNumber": "181615 - 5586",
+          "dueDate": "1/21/2026",
+          "amount": 2000,
+          "status": "Draft"
+        }
+      ]
+    },
+    {
+      "id": "a4a7",
+      "date": "Wed Jan 14 2026",
+      "items": [
+        {
+          "invoiceNumber": "655530 - 7067",
+          "dueDate": "1/21/2026",
+          "amount": 20000,
+          "status": "Draft"
+        }
+      ]
+    },
+    {
+      "id": "981d",
+      "date": "Wed Jan 14 2026",
+      "items": [
+        {
+          "invoiceNumber": "946388 - 2104",
+          "dueDate": "1/21/2026",
+          "amount": 30000,
+          "status": "Draft"
+        }
+      ]
+    },
+    {
+      "id": "b4fa",
+      "date": "Wed Jan 14 2026",
+      "items": [
+        {
+          "invoiceNumber": "685365 - 88",
+          "dueDate": "1/21/2026",
+          "amount": 3000,
+          "status": "Draft"
+        }
+      ]
+    },
+    {
+      "id": "af2d",
+      "date": "Wed Jan 14 2026",
+      "items": [
+        {
+          "invoiceNumber": "555115 - 4362",
+          "dueDate": "1/21/2026",
+          "amount": 30000,
+          "status": "Draft"
+        }
+      ]
     }
   ],
   "recent_activities": [
@@ -120,6 +181,34 @@
       "action": "payment",
       "paymentType": "full",
       "amount": 6000000
+    },
+    {
+      "id": "075f",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "655530 - 7067/Toriola Faidt",
+      "timestamp": "Today, 1:48 PM"
+    },
+    {
+      "id": "48dd",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "946388 - 2104/Toriola Faidt",
+      "timestamp": "Today, 1:49 PM"
+    },
+    {
+      "id": "0a67",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "685365 - 88/Zainab Toriola Ajoke",
+      "timestamp": "Today, 1:50 PM"
+    },
+    {
+      "id": "a226",
+      "title": "You",
+      "action": "created",
+      "invoiceId": "555115 - 4362/Zainab Toriola Ajoke",
+      "timestamp": "Today, 1:51 PM"
     }
   ]
 }
