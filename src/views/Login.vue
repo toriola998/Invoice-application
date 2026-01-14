@@ -1,6 +1,6 @@
 <template>
    <div class="bg-grey-12 min-h-screen flex-center px-4">
-      <div class="sm:w-[500px] bg-white p-6 md:p-10 rounded-3xl shadow w-full">
+      <main class="sm:w-[500px] bg-white p-6 md:p-10 rounded-3xl shadow w-full">
          <img src="/assets/icons/logo.svg" alt="" class="mx-auto" />
 
          <h1
@@ -42,7 +42,7 @@
                @action="handleSignup"
             />
          </div>
-      </div>
+      </main>
    </div>
 </template>
 
