@@ -1,6 +1,6 @@
-import api from '@/api';
 import { useQuery } from '@tanstack/vue-query';
-import { computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue';
+import api from '@/api';
 
 export const useGetAnalytics = () => {
    return useQuery({
@@ -66,4 +66,93 @@ export function useErrorState(error, list) {
       errorTitle,
       errorSubtext,
    };
+}
+
+/**
+ * Simulates real-time activity updates to imitate a socket.
+ * As there is no real server to 'socket' with
+ */
+export function useRealtimeActivity(initialActivities = []) {
+   const activities = ref([...initialActivities]);
+   let interval;
+
+   const formatTimestamp = (date = new Date()) => {
+      const options = { hour: 'numeric', minute: 'numeric' };
+      return `Today, ${date.toLocaleTimeString([], options)}`;
+   };
+
+   const randomNames = [
+      'Olaniyi Ojo Adewale',
+      'Adeola Johnson',
+      'Chukwuemeka Obi',
+      'Fatima Bello',
+      'Tunde Akande',
+   ];
+
+   const randomInvoiceNumber = () => {
+      return String(Math.floor(10000000 + Math.random() * 90000000)).padStart(
+         8,
+         '0'
+      );
+   };
+
+   const getRandomItem = arr => arr[Math.floor(Math.random() * arr.length)];
+
+   // ---------- Activity Generators ----------
+   const createActivityCreated = () => {
+      const name = getRandomItem(randomNames);
+      return {
+         title: 'You',
+         action: 'created',
+         timestamp: formatTimestamp(),
+         invoiceId: `${randomInvoiceNumber()}/${name}`,
+      };
+   };
+
+   const createActivitySent = () => {
+      const sender = 'You';
+      const receiver = getRandomItem(randomNames);
+      const invoiceName = getRandomItem(randomNames);
+      return {
+         title: sender,
+         action: 'sent',
+         timestamp: formatTimestamp(),
+         invoiceId: `${randomInvoiceNumber()}/${invoiceName}`,
+         receiver,
+      };
+   };
+
+   const createActivityPayment = () => {
+      const paymentTypes = ['partial', 'full'];
+      return {
+         title: 'Payment Confirmed',
+         action: 'payment',
+         timestamp: formatTimestamp(),
+         paymentType: getRandomItem(paymentTypes),
+         amount: Math.floor(Math.random() * (6000000 - 500000 + 1) + 500000),
+      };
+   };
+
+   //---------- Main random activity generator ----------!>
+   const addRandomActivity = () => {
+      const activityGenerators = [
+         createActivityCreated,
+         createActivitySent,
+         createActivityPayment,
+      ];
+
+      const activity = getRandomItem(activityGenerators)();
+      activities.value.unshift(activity);
+
+      if (activities.value.length > 5) activities.value.pop();
+   };
+
+   // ---------- Lifecycle ----------
+   onMounted(() => {
+      interval = setInterval(addRandomActivity, 8000);
+   });
+
+   onUnmounted(() => clearInterval(interval));
+
+   return { activities, addRandomActivity };
 }
