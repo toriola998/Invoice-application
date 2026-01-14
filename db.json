@@ -3,98 +3,126 @@
     {
       "id": "1023494-2304",
       "customer": "128 Hug x 10 Hug",
-      "amount": 8625770.00,
+      "amount": 8625770,
       "items": []
     }
   ],
   "activities": [],
   "invoice_analytics": [
     {
-    "text": "Total Paid",
-    "theme": "#B6FDD3",
-    "value": "1,289",
-    "amount": 4120102.76
-  },
-  {
-    "text": "Total Overdue",
-    "theme": "#FFB7BD",
-    "value": "13",
-    "amount": 23000.13
-  },
-  {
-    "text": "Total Draft",
-    "theme": "#D9D9E0",
-    "value": "08",
-    "amount": 12200.0
-  },
-  {
-    "text": "Total Unpaid",
-    "theme": "#F8E39B",
-    "value": "06",
-    "amount": 87102.0
-  }
+      "text": "Total Paid",
+      "theme": "#B6FDD3",
+      "value": "1,289",
+      "amount": 4120102.76
+    },
+    {
+      "text": "Total Overdue",
+      "theme": "#FFB7BD",
+      "value": "13",
+      "amount": 23000.13
+    },
+    {
+      "text": "Total Draft",
+      "theme": "#D9D9E0",
+      "value": "08",
+      "amount": 12200
+    },
+    {
+      "text": "Total Unpaid",
+      "theme": "#F8E39B",
+      "value": "06",
+      "amount": 87102
+    }
   ],
   "recent_invoices": [
-  {
-    "date": "TODAY - 27TH NOVEMBER, 2022",
-    "items": [
-      {
-        "invoiceNumber": "1023494 - 2304",
-        "dueDate": "May 19th, 2023",
-        "amount": 1311750.12,
-        "status": "Paid"
-      },
-      {
-        "invoiceNumber": "1023494 - 2304",
-        "dueDate": "May 19th, 2023",
-        "amount": 1311750.12,
-        "status": "Overdue"
-      }
-    ]
-  },
-  {
-    "date": "8TH DECEMBER, 2022",
-    "items": [
-      {
-        "invoiceNumber": "1023494 - 2304",
-        "dueDate": "May 19th, 2023",
-        "amount": 1311750.12,
-        "status": "Draft"
-      },
-      {
-        "invoiceNumber": "1023494 - 2304",
-        "dueDate": "May 19th, 2023",
-        "amount": 1311750.12,
-        "status": "Pending Payment"
-      }
-    ]
-  }
-   ],
-   "recent_activities": [
-  {
-    "title": "You",
-    "timestamp": "Today, 12:20 PM",
-    "action": "created",
-    "invoiceId": "00239434/Olaniyi Ojo Adewale"
-  },
-  {
-    "title": "Toriola",
-    "timestamp": "Today, 12:40 PM",
-    "action": "created",
-    "invoiceId": "00239434/Olaniyi Ojo Adewale"
-  },
-  {
-    "title": "Faidat",
-    "timestamp": "Today, 21:20 PM",
-    "action": "created",
-    "invoiceId": "00239434/Olaniyi Ojo Adewale"
-  },
-  {
-    "title": "You",
-    "timestamp": "Today, 12:20 PM",
-    "action": "created",
-    "invoiceId": "00239434/Olaniyi Ojo Adewale"
-  }
-  
-] 
+    {
+      "date": "TODAY - 27TH NOVEMBER, 2022",
+      "items": [
+        {
+          "invoiceNumber": "1023494 - 2304",
+          "dueDate": "May 19th, 2023",
+          "amount": 1311750.12,
+          "status": "Paid"
+        },
+        {
+          "invoiceNumber": "1023494 - 2304",
+          "dueDate": "May 19th, 2023",
+          "amount": 1311750.12,
+          "status": "Overdue"
+        }
+      ]
+    },
+    {
+      "date": "8TH DECEMBER, 2022",
+      "items": [
+        {
+          "invoiceNumber": "1023494 - 2304",
+          "dueDate": "May 19th, 2023",
+          "amount": 1311750.12,
+          "status": "Draft"
+        },
+        {
+          "invoiceNumber": "1023494 - 2304",
+          "dueDate": "May 19th, 2023",
+          "amount": 1311750.12,
+          "status": "Pending Payment"
+        }
+      ]
+    }
+  ],
+  "recent_activities": [
+    {
+      "title": "You",
+      "timestamp": "Today, 12:20 PM",
+      "action": "created",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+    },
+    {
+      "title": "You",
+      "timestamp": "Today, 12:40 PM",
+      "action": "created",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+    },
+    {
+      "title": "You",
+      "timestamp": "Today, 21:20 PM",
+      "action": "created",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+    },
+    {
+      "title": "You",
+      "timestamp": "Today, 12:20 PM",
+      "action": "created",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+    }
+  ],
+  "invoice_activity": [
+    {
+      "title": "You",
+      "timestamp": "Today, 12:20 PM",
+      "action": "created",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale"
+    },
+    {
+      "title": "You",
+      "timestamp": "Today, 12:20 PM",
+      "action": "sent",
+      "invoiceId": "00239434/Olaniyi Ojo Adewale",
+      "receiver": "Olaniyi Ojo Adewale"
+    },
+    {
+      "title": "Payment Confirmed",
+      "timestamp": "Today, 12:20 PM",
+      "action": "payment",
+      "paymentType": "partial",
+      "amount": 503000
+    },
+    {
+      "title": "Payment Confirmed",
+      "timestamp": "Today, 12:20 PM",
+      "action": "payment",
+      "paymentType": "full",
+      "amount": 6000000
+    }
+  ]
 }

@@ -18,6 +18,11 @@ export default {
       let url = 'recent_activities';
       return axios({ method, url });
    },
+   getAllInvoiceActivities: () => {
+      let method = 'get';
+      let url = 'invoice_activity';
+      return axios({ method, url });
+   },
 };
 
 import { initializeApp } from 'firebase/app';

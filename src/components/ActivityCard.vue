@@ -1,7 +1,7 @@
 <template>
    <article class="flex items-start gap-x-4 relative">
       <div
-         class="absolute left-5 top-10 h-10 w-1 bg-gray-200"
+         class="absolute left-5 top-10 h-full w-px bg-gray-200"
          v-if="showTimeline"
       />
 
@@ -23,20 +23,20 @@
 
             <!-- Sent -->
             <p v-else-if="item.action === 'sent'">
-               <span class="text-grey-11">Sent invoice</span>
-               <span class="font-medium"> {{ item.invoiceId }} </span>
-               <span class="text-grey-11">to</span>
+               <span class="text-grey-11 p-px">Sent invoice</span>
+               <span class="font-medium px-1 inline-flex"> {{ item.invoiceId }} </span>
+               <span class="text-grey-11 inline-flex pr-1">to</span>
                <span class="font-medium"> {{ item.receiver }} </span>
             </p>
 
             <!-- Payment -->
             <p v-else-if="item.action === 'payment'">
-               <span class="text-grey-11"
+               <span class="text-grey-11 p-1 inline-flex"
                   >You manually confirmed a {{ item.paymentType }} payment
                   of</span
                >
                <span class="font-medium">
-                  ${{ formatToDollar(item.amount) }}
+                  {{ formatToDollar(item.amount) }}
                </span>
             </p>
          </div>

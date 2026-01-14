@@ -35,6 +35,17 @@ export const useGetRecentActivities = () => {
    });
 };
 
+export const useGetInvoiceActivities = () => {
+   return useQuery({
+      queryKey: ['invoice_activity'],
+      queryFn: async () => {
+         const { data } = await api.getAllInvoiceActivities();
+         return data || {};
+      },
+      staleTime: 5 * 60 * 1000,
+   });
+};
+
 export function useErrorState(error, list) {
    const showError = computed(() => {
       return error.value || !list.value || list.value.length === 0;
