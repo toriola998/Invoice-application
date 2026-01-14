@@ -9,53 +9,25 @@
             INVOICE
          </h1>
 
-         <div
-            class="text-input w-full relative"
-            :class="{ 'has-error': !!emailError }"
-         >
-            <label for="name" class="text-sm mb-1 text-dark-grey block"
-               >Email</label
-            >
-            <input
-               id="email"
-               v-model="email"
-               type="email"
-               placeholder="Email"
-               @blur="emailBlur"
-               :class="{ 'border-red-500': emailError }"
-            />
-            <span v-if="emailError" class="error-msg">{{ emailError }}</span>
-         </div>
-
-         <div
-            class="text-input w-full relative mt-6 mb-10"
-            :class="{ 'has-error': !!passwordError }"
-         >
-            <label for="password" class="text-sm mb-1 text-dark-grey block">
-               Password</label
-            >
-            <input
-               id="password"
-               v-model="password"
-               placeholder="Password"
-               :type="isPasswordVisible ? 'text' : 'password'"
-               @blur="passwordBlur"
-               :class="{ 'border-red-500': passwordError }"
-            />
-            <span v-if="passwordError" class="error-msg">{{
-               passwordError
-            }}</span>
-            <div className="absolute right-6 top-[2.7rem]">
-               <button type="button" @click="togglePassword">
-                  <img
-                     :src="`/assets/icons/${isPasswordVisible ? 'eye-open.svg' : 'eye-open.svg'}`"
-                     alt="show/hide password"
-                     class="w-5"
-                  />
-               </button>
-            </div>
-         </div>
-
+         <TextInput
+            id="email"
+            label="Email"
+            type="email"
+            placeholder="Enter your email"
+            v-model="email"
+            :error="emailError"
+            :blur="emailBlur"
+         />
+         <TextInput
+            id="password"
+            label="Password"
+            type="password"
+            placeholder="Password"
+            v-model="password"
+            :error="passwordError"
+            :blur="passwordBlur"
+            class="mt-6 mb-10"
+         />
          <div class="flex-col flex gap-y-3 mt-10">
             <TheButton
                text="Login"
@@ -86,6 +58,7 @@ import { toast } from 'vue3-toastify';
 import { useField, useForm } from 'vee-validate';
 import * as yup from 'yup';
 import TheButton from '@/components/shared/TheButton.vue';
+import TextInput from '@/components/shared/TextInput.vue';
 
 const router = useRouter();
 const isSignInLoading = ref(false);
@@ -115,11 +88,6 @@ const {
    errorMessage: passwordError,
    handleBlur: passwordBlur,
 } = useField('password');
-
-const isPasswordVisible = ref(false);
-function togglePassword() {
-   isPasswordVisible.value = !isPasswordVisible.value;
-}
 
 const handleLogin = async () => {
    const { valid } = await validate();
@@ -152,40 +120,3 @@ const handleSignup = async () => {
    }
 };
 </script>
-
-<style scoped>
-.text-input input {
-   @apply w-full px-5 h-14 border rounded-xl;
-   outline: none;
-   transition:
-      border-color 0.3s ease-in-out,
-      color 0.3s ease-in-out,
-      background-color 0.3s ease-in-out;
-}
-.text-input input::placeholder {
-   @apply text-grey-11 font-normal text-sm;
-}
-.text-input input:focus {
-   @apply border border-blue-10;
-}
-
-.text-input.has-error input {
-   @apply border border-red-500;
-}
-
-.error-msg {
-   @apply text-red-500 absolute right-0 text-xs pt-[2px] -bottom-5;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-   -webkit-appearance: none;
-   margin: 0;
-}
-
-/* Firefox */
-input[type='number'] {
-   -moz-appearance: textfield;
-}
-</style>
