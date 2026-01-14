@@ -4,7 +4,7 @@
    >
       <div>
          <h1 class="text-black font-bold text-2xl lg:text-3xl">
-            Invoice - 1023494 - 2304
+            Invoice - {{ invoice?.invoiceNumber }}
          </h1>
          <p class="text-sm md:text-base mt-2 text-grey-11">
             View the details and activity of this invoice
@@ -35,16 +35,25 @@
    </div>
 
    <p
-      class="btn text-blue-10 border border-blue-12 bg-blue-11 text-[9px] sm:text-[10px] w-36 !h-10 mt-6"
+      class="btn text-[9px] sm:text-[10px] w-36 !h-10 mt-6"
+      :class="getStatusColor(invoice?.status)"
    >
-      Partial payment
+      {{ invoice?.status }}
    </p>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { getStatusColor } from '@/utils';
 
 const toggleMore = ref(false);
+
+defineProps({
+   invoice: {
+      type: Object,
+      default: () => ({}),
+   },
+});
 </script>
 
 <style scoped>

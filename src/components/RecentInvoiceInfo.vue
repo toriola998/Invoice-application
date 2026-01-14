@@ -33,7 +33,7 @@ import { formatToDollar, getStatusColor } from '@/utils';
 defineProps({
    invoice: {
       type: Object,
-      default: {},
+      default: () => ({}),
    },
 });
 </script>

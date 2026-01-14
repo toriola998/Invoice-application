@@ -13,7 +13,7 @@
          :sub-title="errorSubtext"
       />
       <div v-else class="flex flex-col gap-y-6">
-          <ActivityCard
+         <ActivityCard
             v-for="(item, index) in data"
             :key="index"
             :item="item"
@@ -32,4 +32,3 @@ import SkeletonLoader from '../shared/SkeletonLoader.vue';
 const { isLoading, data, error } = useGetInvoiceActivities();
 const { showError, errorTitle, errorSubtext } = useErrorState(error, data);
 </script>
-

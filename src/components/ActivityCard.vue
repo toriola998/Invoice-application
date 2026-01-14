@@ -24,7 +24,9 @@
             <!-- Sent -->
             <p v-else-if="item.action === 'sent'">
                <span class="text-grey-11 p-px">Sent invoice</span>
-               <span class="font-medium px-1 inline-flex"> {{ item.invoiceId }} </span>
+               <span class="font-medium px-1 inline-flex">
+                  {{ item.invoiceId }}
+               </span>
                <span class="text-grey-11 inline-flex pr-1">to</span>
                <span class="font-medium"> {{ item.receiver }} </span>
             </p>

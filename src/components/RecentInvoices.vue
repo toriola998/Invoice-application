@@ -35,7 +35,11 @@
          </div>
       </div>
    </section>
-   <Invoice v-if="showInvoice" @close="showInvoice = false" />
+   <Invoice
+      :invoice="selectedInvoice"
+      v-if="showInvoice"
+      @close="showInvoice = false"
+   />
 </template>
 
 <script setup>

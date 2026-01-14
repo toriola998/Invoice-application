@@ -11,7 +11,7 @@
             </button>
 
             <div class="pr-6 h-[calc(100vh-200px)] overflow-y-scroll">
-               <DetailsHeader />
+               <DetailsHeader :invoice="invoice" />
 
                <div
                   class="border border-grey-10 rounded-3xl py-6 px-6 flex-items gap-x-2 my-8 xl:w-fit"
@@ -56,8 +56,14 @@ import { ref } from 'vue';
 import DetailsHeader from './DetailsHeader.vue';
 import InvoiceItems from './InvoiceItems.vue';
 import InvoiceSenderDetails from './InvoiceSenderDetails.vue';
-import RecentActivities from '../RecentActivities.vue';
 import InvoiceActivity from './InvoiceActivity.vue';
+
+defineProps({
+   invoice: {
+      type: Object,
+      default: () => ({}),
+   },
+});
 
 const reminders = ref([
    { id: 1, label: '14 days before due date', active: true },

@@ -11,6 +11,7 @@ export function getStatusColor(status) {
       Overdue: 'bg-red-10 text-red-12 border border-red-11',
       Draft: 'bg-light-grey-10 text-dark-grey border border-light-grey-12',
       'Pending Payment': 'bg-yellow-10 text-yellow-12 border border-yellow-11',
+      'Partial Payment': 'text-blue-10 border border-blue-12 bg-blue-11',
    };
 
    return statusColors[status] || '';

@@ -1,13 +1,4 @@
 {
-  "invoices": [
-    {
-      "id": "1023494-2304",
-      "customer": "128 Hug x 10 Hug",
-      "amount": 8625770,
-      "items": []
-    }
-  ],
-  "activities": [],
   "invoice_analytics": [
     {
       "text": "Total Paid",
@@ -39,13 +30,13 @@
       "date": "TODAY - 27TH NOVEMBER, 2022",
       "items": [
         {
-          "invoiceNumber": "1023494 - 2304",
+          "invoiceNumber": "1023500 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Paid"
         },
         {
-          "invoiceNumber": "1023494 - 2304",
+          "invoiceNumber": "1023608 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Overdue"
@@ -56,16 +47,22 @@
       "date": "8TH DECEMBER, 2022",
       "items": [
         {
-          "invoiceNumber": "1023494 - 2304",
+          "invoiceNumber": "1023875 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Draft"
         },
         {
-          "invoiceNumber": "1023494 - 2304",
+          "invoiceNumber": "1023095 - 2304",
           "dueDate": "May 19th, 2023",
           "amount": 1311750.12,
           "status": "Pending Payment"
+        },
+        {
+          "invoiceNumber": "102367 - 2304",
+          "dueDate": "May 19th, 2023",
+          "amount": 1311750.12,
+          "status": "Partial Payment"
         }
       ]
     }
