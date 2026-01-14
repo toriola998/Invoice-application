@@ -1,35 +1,52 @@
-# youverify-assessment
+# Invoice App
 
-This template should help get you started developing with Vue 3 in Vite.
+A simple invoice application implementing user authentication, invoice creation, and real-time activity feed.
 
-## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Recommended Browser Setup
+- User authentication (signup/login) using Firebase.
+- Create & view invoices.
+- Real-time invoice activity feed simulation.
+- Responsive design for desktop and mobile.
+- Error handling for invalid input, network errors, and invalid routes.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Frontend:** Vue 3
+- **Validation:** Vee-validate
+- **Authentication:** Firebase
+- **API / Mock Backend:** json-server
+- **Real-time Simulation:** Custom interval-based activity feed
 
-## Project Setup
+## Installation & Setup
 
-```sh
+1. Clone the repo:
+```bash
+git clone https://github.com/toriola998/Invoice-application.git
+cd Invoice-application
+```
+
+
+2. Install dependencies:
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. Start the mock backend:
 
-```sh
+```bash
+npm run mock-api
+```
+
+4. Start the frontend app:
+
+```bash
 npm run dev
 ```
+5. Open in browser: http://localhost:5173 (or default port for Vite)
 
 ### Compile and Minify for Production
 
@@ -37,8 +54,30 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Format & Linting
 
 ```sh
-npm run lint
+npm run format
 ```
+
+
+## Environment Variables
+
+The project uses environment variables to configure API base URLs and Firebase authentication.  
+Create a `.env` file in the root of the project with the following variables:
+
+```env
+VITE_BASE_URL=''
+VITE_API_KEY=''
+VITE_AUTH_DOMAIN=''
+VITE_PROJECT_ID=''
+VITE_STORAGE_BUCKET=''
+VITE_MESSAGE_SENDER_ID=''
+VITE_APP_ID=''
+VITE_MEASUREMENT_ID=''
+```
+
+## Assumptions
+- Loading spinners / skeleton loaders might not be visible for long when running on a local server due to fast responses.
+- Real-time activity updates are simulated using intervals and may not reflect actual backend socket events, for **invoice activities**.
+- Invoice IDs and user names are randomly generated for simulation purposes.

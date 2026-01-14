@@ -113,7 +113,7 @@ const handleCreateInvoice = async () => {
             items: [newItem],
          });
       }
-      
+
       let newActivityPayload = {
          title: 'You',
          action: 'created',
